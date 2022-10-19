@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("http://fonts.cdnfonts.com/css/ananda-2");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  background-image: url("./background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffffffd8;
+  text-align: center;
+  
+}
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+  gap: 60px;
+}
+
+/*************************************************/
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px;
+  background-color: #000000d4;
+  box-shadow: #ff730098 -1px -1px 4px;
+}
+nav .logo {
+  font-family: "Ananda", sans-serif;
+  font-family: "Ananda Black", sans-serif;
+  font-size: 63px;
+  color: #000000;
+  text-shadow: 0px 0px 5px #ff1000;
+  user-select: none;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  list-style: none;
+}
+nav ul li {
+  padding: 20px min(30px, 5%);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/**************** main ****************/
+.main {
+  background-color: #00000099;
+  font-size: 20px;
+  box-shadow: #eb000075 0px 0px 10px;
+  padding: 30px;
+  width: max(400px, 50%);
+  min-height: 500px;
+}
+
+/**************** presentation ****************/
+.presentation-card {
+  width: 100%;
+  transition: ease-in-out 500ms;
+}
+.img-container  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-container img {
+  width: max(330px, 5%);
+}
+.presentation-card div {
+  padding: 10px;
+}
+.presentation-card .text p {
+  padding: 5px;
+}
+.call-to-action p {
+  font-size: 26px;
+  color: #ffffff;
+}
+/********************** footer **************************/
+footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 25px;
+  font-weight: bold;
+  background-color: #000000d4;
+  box-shadow: #ff730098 1px 1px 4px;
+}
+
+/********************** menu **************************/
+.menu-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 0.6fr));
+  gap: 50px;
+  justify-content: center;
+  transition: ease-in-out 500ms;
+}
+.card {
+  padding: 15px;
+  background-color: #000000af;
+  cursor: pointer;
+  box-shadow: #00000059 0px 5px 15px;
+}
+.card:hover {
+  background-color: #63636366;
+  transition: ease-in-out 250ms;
+
+}
+.card p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  height: 80px;
+}
+.card img {
+  width: 24%;
+}
+/*********************** contact ***************************/
+.contact-card {
+text-align: left;
+transition: ease-in-out 500ms;
+}
+.phone, .location, .location-img {
+  padding: 15px 0;
+}
+.location-img {
+  width: 100%;
+}
+.location-img img {
+  width: 100%;
+}
+/*********************** media query ***************************/
+@media only screen and (max-width: 498px) {
+  .main {
+    width: 100%;
+  }
+  .presentation-card img {
+    width: 280px;
+  }
+}
+
