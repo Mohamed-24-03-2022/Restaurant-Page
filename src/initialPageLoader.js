@@ -42,6 +42,12 @@ const createNavBar = () => {
         list.appendChild(listItems[i]);
         listItems[i].appendChild(listItemsLinks[i]);
         listItemsLinks[i].setAttribute("href", " ");
+        listItemsLinks[i].addEventListener("click", (e) => {
+            listItems.forEach(item => {
+                item.style.borderBottom = "solid 2px #ffffff00";
+            });
+            listItems[i].style.borderBottom = "solid 2px #ffffff";
+        })
     }
     logoContainer.textContent = "Red House";
     listItemsLinks[0].textContent = "Home";
@@ -92,12 +98,12 @@ const createFooter = () => {
     footerLink.setAttribute("href", "https://github.com/mohamed-24-03-2022");
     footerLink.setAttribute("target", "_blank");
 
+    footerText.textContent = "Copyright © 2022 Mohamed-24-03-2022 ";
+
     footer.appendChild(footerContainer);
-    footerContainer.appendChild(footerText);
     footerText.appendChild(footerLink);
     footerLink.appendChild(fontAwesome);
-
-    footerText.textContent = "Copyright © 2022 Mohamed-24-03-2022 ";
+    footerContainer.appendChild(footerText);
 
     content.appendChild(footer);
 };

@@ -17,14 +17,13 @@ body {
   background-attachment: fixed;
   color: #ffffffd8;
   text-align: center;
-  
 }
 #content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: max-content;
   gap: 60px;
 }
@@ -42,8 +41,9 @@ nav .logo {
   font-family: "Ananda", sans-serif;
   font-family: "Ananda Black", sans-serif;
   font-size: 63px;
-  color: #000000;
-  text-shadow: 0px 0px 5px #ff1000;
+  color: #040404;
+  text-shadow: -1px 1px 5px #ff0000;
+  scale: 1.1;
   user-select: none;
 }
 nav ul {
@@ -54,6 +54,12 @@ nav ul {
 }
 nav ul li {
   padding: 20px min(30px, 5%);
+  border-bottom: solid 2px #ffffff00;
+  text-shadow: 0px 0px 2px #ffffff;
+  transition: ease-in-out 200ms;
+}
+li:hover {
+  transform: translateY(-5px);
 }
 a {
   text-decoration: none;
@@ -61,21 +67,31 @@ a {
 }
 
 /**************** main ****************/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 .main {
   background-color: #00000099;
   font-size: 20px;
   box-shadow: #eb000075 0px 0px 10px;
   padding: 30px;
-  width: max(400px, 50%);
-  min-height: 500px;
+  width: min(700px, 80%);
+  min-height: 600px;
 }
 
 /**************** presentation ****************/
 .presentation-card {
   width: 100%;
   transition: ease-in-out 500ms;
+  animation: fadeIn 1.5s;
 }
-.img-container  {
+.img-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,6 +126,7 @@ footer {
   gap: 50px;
   justify-content: center;
   transition: ease-in-out 500ms;
+  animation: fadeIn 1.5s;
 }
 .card {
   padding: 15px;
@@ -120,7 +137,6 @@ footer {
 .card:hover {
   background-color: #63636366;
   transition: ease-in-out 250ms;
-
 }
 .card p {
   display: flex;
@@ -134,14 +150,19 @@ footer {
 }
 /*********************** contact ***************************/
 .contact-card {
-text-align: left;
-transition: ease-in-out 500ms;
+  text-align: left;
+  transition: ease-in-out 500ms;
+  animation: fadeIn 1.5s;
 }
-.phone, .location, .location-img {
+.phone,
+.location,
+.location-img {
   padding: 15px 0;
+  cursor: default;
 }
 .location-img {
   width: 100%;
+  cursor: pointer;
 }
 .location-img img {
   width: 100%;
@@ -155,4 +176,3 @@ transition: ease-in-out 500ms;
     width: 280px;
   }
 }
-
