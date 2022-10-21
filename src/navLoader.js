@@ -25,10 +25,9 @@ export default function () {
         list.appendChild(listItems[i]);
         listItems[i].appendChild(listItemsLinks[i]);
         listItemsLinks[i].setAttribute("href", " ");
-        listItemsLinks[i].addEventListener("click", (e) => {
-            listItems.forEach(item => {
-                item.style.borderBottom = "solid 2px #ffffff00";
-            });
+
+        listItems[i].addEventListener("click", () => {
+            listItems.forEach(item => item.style.borderBottom = "solid 2px #ffffff00");
             listItems[i].style.borderBottom = "solid 2px #ffffff";
         })
     }

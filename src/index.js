@@ -13,7 +13,7 @@ const switchPages = (() => {
     menuCard.remove();
     contactCard.remove();
 
-    const links = document.querySelectorAll("nav a");
+    const links = document.querySelectorAll("nav li");
     const homeLink = links[0];
     const menuLink = links[1];
     const contactLink = links[2];
