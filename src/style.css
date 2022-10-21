@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("http://fonts.cdnfonts.com/css/ananda-2");
+@font-face {
+  font-family: 'Ananda Black';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ananda Black'), url('https://fonts.cdnfonts.com/s/43086/AnandaBlack-WRJO.woff') format('woff');
+}
 
 * {
   padding: 0;
@@ -54,7 +59,6 @@ nav {
   box-shadow: #ff730098 -1px -1px 4px;
 }
 nav .logo {
-  font-family: "Ananda", sans-serif;
   font-family: "Ananda Black", sans-serif;
   font-size: 63px;
   color: #040404;
