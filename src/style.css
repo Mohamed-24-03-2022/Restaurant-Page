@@ -6,11 +6,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 html {
   height: 100%;
 }
-
 body {
   height: 100%;
   font-family: "Montserrat", sans-serif;
@@ -19,10 +17,12 @@ body {
   background-size: cover;
   background-attachment: fixed;
   color: #ffffffd8;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
-
 #content {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,6 +30,16 @@ body {
   width: 100%;
   height: max-content;
   gap: 60px;
+}
+/******************* CSS animation ******************/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 /*************************************************/
@@ -43,7 +53,6 @@ nav {
   background-color: #000000d4;
   box-shadow: #ff730098 -1px -1px 4px;
 }
-
 nav .logo {
   font-family: "Ananda", sans-serif;
   font-family: "Ananda Black", sans-serif;
@@ -54,7 +63,6 @@ nav .logo {
   user-select: none;
   width: max-content;
 }
-
 nav ul {
   display: flex;
   justify-content: center;
@@ -63,18 +71,15 @@ nav ul {
   gap: 5px;
   width: 300px;
 }
-
 nav ul li {
   padding: 20px min(30px, 5%);
   border-bottom: solid 2px #ffffff00;
   text-shadow: 0px 0px 2px #ffffff;
   transition: ease-in-out 200ms;
 }
-
 li:hover {
   transform: translateY(-5px);
 }
-
 a {
   text-decoration: none;
   color: inherit;
@@ -83,16 +88,6 @@ a {
 }
 
 /**************** main ****************/
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 .main {
   background-color: #00000099;
   font-size: 20px;
@@ -108,25 +103,20 @@ a {
   transition: ease-in-out 500ms;
   animation: fadeIn 1.5s;
 }
-
 .img-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .img-container img {
   width: max(330px, 5%);
 }
-
 .presentation-card div {
   padding: 10px;
 }
-
 .presentation-card .text p {
   padding: 5px;
 }
-
 .call-to-action p {
   font-size: 26px;
   color: #ffffff;
@@ -149,21 +139,18 @@ footer {
   gap: 50px;
   justify-content: center;
   transition: ease-in-out 500ms;
-  animation: fadeIn 1.5s;
+  animation: fadeIn 2s;
 }
-
 .card {
   padding: 15px;
   background-color: #000000af;
   cursor: pointer;
   box-shadow: #00000059 0px 5px 15px;
 }
-
 .card:hover {
   background-color: #63636366;
   transition: ease-in-out 250ms;
 }
-
 .card p {
   display: flex;
   justify-content: center;
@@ -171,7 +158,6 @@ footer {
   font-size: 18px;
   height: 80px;
 }
-
 .card img {
   width: 24%;
 }
@@ -182,19 +168,16 @@ footer {
   transition: ease-in-out 500ms;
   animation: fadeIn 1.5s;
 }
-
 .phone,
 .location,
 .location-img {
   padding: 15px 0;
   cursor: default;
 }
-
 .location-img {
   width: 100%;
   cursor: pointer;
 }
-
 .location-img img {
   width: 100%;
 }
@@ -204,7 +187,6 @@ footer {
   .main {
     width: 100%;
   }
-
   .presentation-card img {
     width: 280px;
   }
